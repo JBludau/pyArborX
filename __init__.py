@@ -1,1 +1,1 @@
-from pyArborX_static import *
+from arborx_static import *

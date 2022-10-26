@@ -8,13 +8,13 @@
 
 namespace py = pybind11;
 
-namespace pyArborX
+namespace arborx
 {
 namespace helper
 {
 std::string pyPrintPoint(ArborX::Point const &p)
 {
-  return "<pyArborX::Point with " + std::to_string(p[0]) + " " +
+  return "<arborx::Point with " + std::to_string(p[0]) + " " +
          std::to_string(p[1]) + " " + std::to_string(p[2]) + ">";
 }
 } // namespace helper
@@ -35,8 +35,8 @@ void generatePointWrapper(py::module &m)
            [](ArborX::Point &p, int idx, double val) { p[idx] = val; })
 
       .def("__repr__", py::overload_cast<ArborX::Point const &>(
-                           &pyArborX::helper::pyPrintPoint));
+                           &arborx::helper::pyPrintPoint));
 }
-} // namespace pyArborX
+} // namespace arborx
 
 #endif

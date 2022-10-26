@@ -8,7 +8,7 @@
 
 namespace py = pybind11;
 
-namespace pyArborX
+namespace arborx
 {
 namespace helper
 {
@@ -16,6 +16,6 @@ std::string pyPrintSphere(ArborX::Sphere const &s);
 }
 
 void generateSphereWrapper(py::module &m);
-} // namespace pyArborX
+} // namespace arborx
 
 #endif

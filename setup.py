@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="pyArborX",
+    name="arborx",
     version="0.1",
-    packages=find_packages(include=["pyArborX", "pyArborX.*"]),
+    packages=find_packages(include=["arborx", "arborx.*"]),
     include_package_data=True
 )
